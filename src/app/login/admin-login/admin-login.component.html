@@ -1,0 +1,16 @@
+<!-- login page -->
+<div class="login-page">
+    <div class="login-container">
+    <h2>Admin Login</h2>
+    <form>
+            <input type="text" placeholder="Admin Username" required />
+            <input type="password" placeholder="Password" required />
+            <button type="submit" (click)="doAdminLogin()">Login</button>
+    </form>
+    <p class="switch-page">
+        Create a new admin? <a routerLink="/login/admin-registration">Register</a><br><br>
+        Not an admin? <a routerLink="/login/user-login">User Login</a>
+    </p>
+    </div>
+</div>
+<router-outlet></router-outlet>
