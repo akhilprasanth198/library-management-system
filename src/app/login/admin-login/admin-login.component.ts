@@ -16,14 +16,14 @@ export class AdminLoginComponent {
     username:"",
     password:"",
   }
-  userService =inject(AdminService)
+  adminService = inject(AdminService)
   router = inject(Router);
   doAdminLogin()
   {
     this.adminobject.onLoginSubmit(this.adminobject).subscribe((result:any) =>
     {
-      //if the api returns sucess we klet the user to the system
-      //otherwise provide and alert errpr message
+      //if the api returns sucess we kept the user to the system
+      //otherwise provide and alert error message
       console.log(result);
       if(result && result.token){
         this.router.navigateByUrl('admin-dashboard');

@@ -1,1 +1,25 @@
-<p>user-dashboard works!</p>
+    <!-- home.component.html -->
+    <div class="home-page">
+        <!-- Navbar and Site Name -->
+        <header class="navbar">
+        <h1 class="site-name">Library Management System</h1>
+        <nav>
+            <ul>
+            <li><a routerLink="/home">Home</a></li>
+            <li><a routerLink="/about">About</a></li>
+            </ul>
+        </nav>
+        </header>
+    
+        <!-- Search Section -->
+        <section class="search-section">
+        <h2>Search Books</h2>
+        <form>
+            <input type="text"  placeholder="Search by Title" />
+            <input type="text" placeholder="Search by Author" />
+            <input type="text"placeholder="Search by Language" />
+            <button type="submit" [(ngModel)]="searchTitle">Search</button>
+        </form>
+        </section>
+    </div>
+    <router-outlet></router-outlet>

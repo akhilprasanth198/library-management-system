@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\.angular",
+    "\\public",
+    "\\src"
   ],
   "PreviewInSolutionExplorer": false
 }

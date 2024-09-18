@@ -1,1 +1,17 @@
-<p>book-details works!</p>
+<button (click)="getBookDetails()">Book Details</button>
+<div> @if(book.length >0){
+    <h2>Book Details</h2>
+    <ul>
+        <li>
+        @for (books of book; track books) {
+            <h3>{{books.title}}</h3>
+            Book Id : {{books.id}}<br>
+            Author Name : {{books.author}}<br>
+            Language : {{books.language}}<br>
+            Category : {{books.category}}<br>
+            Quantity :{{books.quantity}}
+        }
+        </li>
+    </ul>
+    }
+</div>
