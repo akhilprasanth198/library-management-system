@@ -23,8 +23,8 @@ export class UserLoginComponent {
     this.userService.onLoginSubmit(this.userobject).subscribe((result:any) =>
     {
       console.log(result);
-      if(result && result.message=='Login Sucess'){
-        this.router.navigateByUrl('home');
+      if(result && result.message=='Login successful'){
+        this.router.navigateByUrl('admin-dashboard');
       }
       
     },
