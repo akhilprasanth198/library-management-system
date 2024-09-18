@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { BookService } from '../book-service.service';
+import { BookService } from '../services/book-service.service';
 @Component({
   selector: 'app-search',
   standalone: true,

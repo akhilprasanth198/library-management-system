@@ -3,7 +3,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
-import { AdminService } from '../../admin.service';
+import { AdminService } from '../../services/admin.service';
 @Component({
   selector: 'app-admin-login',
   standalone: true,
@@ -20,12 +20,11 @@ export class AdminLoginComponent {
   router = inject(Router);
   doAdminLogin()
   {
-    this.adminobject.onLoginSubmit(this.adminobject).subscribe((result:any) =>
+    this.adminService.onLoginSubmit(this.adminobject).subscribe((result:any) =>
     {
-      //if the api returns sucess we kept the user to the system
-      //otherwise provide and alert error message
+
       console.log(result);
-      if(result && result.token){
+      if(result && result.message=="login Succesful"){
         this.router.navigateByUrl('admin-dashboard');
       }
       

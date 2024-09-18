@@ -8,10 +8,9 @@ export class AdminService {
   constructor(private http:HttpClient) { }
   onLoginSubmit(adminobj:any)
   {
-    return this.http.post('https://localhost:7174/api/Users/register',adminobj)
+    console.log(adminobj);
+    return this.http.post('https://localhost:7174/api/Login/Login',adminobj)
 
   }
-  //if the api returns success we let the user ti the system
-  //otherwise provide and alert/error message
 
 }

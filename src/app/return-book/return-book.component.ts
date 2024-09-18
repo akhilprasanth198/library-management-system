@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BorrowService } from '../borrow-service.service';
+import { BorrowService } from '../services/borrow-service.service';
 import { FormsModule } from '@angular/forms';
 
 @Component({

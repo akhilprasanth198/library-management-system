@@ -10,10 +10,11 @@ export class UserService {
 
   onLoginSubmit(userobj:any)
   {
-    return this.http.post('https://localhost:7174/api/Users',userobj)
+    console.log(userobj);
+    
+    return this.http.post('https://localhost:7174/api/Login/Login',userobj)
 
   }
-  //if the api returns success we let the user ti the system
-  //otherwise provide and alert/error message
+
 
 }

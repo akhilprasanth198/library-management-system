@@ -3,34 +3,32 @@ import { Component,inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { Router } from '@angular/router';
-import { UserService } from '../../user.service';
+import { UserService } from '../../services/user.service';
 @Component({
   selector: 'app-user-login',
   standalone: true,
-  imports: [RouterOutlet,RouterLink,FormsModule,CommonModule],
+  imports: [RouterLink,FormsModule,CommonModule],
   templateUrl: './user-login.component.html',
   styleUrl: './user-login.component.css'
 })
 export class UserLoginComponent {
   userobject:any ={
     username:"",
-    password:"",
+    password:""
   }
   userService =inject(UserService)
   router = inject(Router);
-  doUserLogin()
+  doLogin()
   {
     this.userService.onLoginSubmit(this.userobject).subscribe((result:any) =>
     {
-      //if the api returns sucess we klet the user to the system
-      //otherwise provide and alert errpr message
       console.log(result);
-      if(result && result.token){
-        this.router.navigateByUrl('user-dashboard');
+      if(result && result.message=='Login Sucess'){
+        this.router.navigateByUrl('home');
       }
       
     },
-    (error) =>
+    (error:any) =>
       {
         alert('Invalid username and password');
         console.log(error);

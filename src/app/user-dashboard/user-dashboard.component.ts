@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { BookService } from '../book-service.service';
-import { UserService } from '../user.service';
+import { BookService } from '../services/book-service.service';
+import { UserService } from '../services/user.service';
 import { FormsModule } from '@angular/forms';
 import { NgFor } from '@angular/common';
+
 
 @Component({
   selector: 'app-user-dashboard',

@@ -1,5 +1,5 @@
 import { Component, importProvidersFrom } from '@angular/core';
-import { BookService } from '../book-service.service';
+import { BookService } from '../services/book-service.service';
 import { HttpClient } from '@angular/common/http';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { NgFor, NgIf } from '@angular/common';
