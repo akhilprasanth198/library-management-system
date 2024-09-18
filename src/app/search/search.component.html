@@ -3,15 +3,15 @@
         <form (submit)="search()">
         <div>
             <label>Author: </label>
-            <input [(ngModel)]="author" name="author" />
+            <input [(ngModel)]="author" name="author" required/>
         </div>
         <div>
             <label>Language: </label>
-            <input [(ngModel)]="language" name="language" />
+            <input [(ngModel)]="language" name="language" required />
         </div>
         <div>
             <label>Title: </label>
-            <input [(ngModel)]="title" name="title" />
+            <input [(ngModel)]="title" name="title" required />
         </div>
         <button type="submit">Search</button>
         </form>
