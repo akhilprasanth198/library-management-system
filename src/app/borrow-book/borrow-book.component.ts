@@ -1,28 +1,28 @@
-import { Component } from '@angular/core';
-import { BorrowService } from '../services/borrow-service.service';
-import { FormsModule } from '@angular/forms';
+// import { Component } from '@angular/core';
 
-@Component({
-  selector: 'app-borrow-book',
-  standalone : true,
-  imports :[FormsModule],
-  templateUrl: './borrow-book.component.html',
-  styleUrls: ['./borrow-book.component.css']
-})
-export class BorrowBookComponent {
-  userId: number = 0;
-  bookId: number = 0;
-  message: string = '';
+// import { FormsModule } from '@angular/forms';
 
-  constructor(private borrowService: BorrowService) {}
+// @Component({
+//   selector: 'app-borrow-book',
+//   standalone : true,
+//   imports :[FormsModule],
+//   templateUrl: './borrow-book.component.html',
+//   styleUrls: ['./borrow-book.component.css']
+// })
+// export class BorrowBookComponent {
+//   userId: number = 0;
+//   bookId: number = 0;
+//   message: string = '';
 
-  onBorrow() {
-    if (this.userId && this.bookId) {
-      this.borrowService.borrowBook(this.userId, this.bookId)
-        .subscribe({
-          next: (response) => this.message = response,
-          error: (error) => this.message = error.error
-        });
-    }
-  }
-}
+//   constructor(private borrowService: BorrowService) {}
+
+//   onBorrow() {
+//     if (this.userId && this.bookId) {
+//       this.borrowService.borrowBook(this.userId, this.bookId)
+//         .subscribe({
+//           next: (response) => this.message = response,
+//           error: (error) => this.message = error.error
+//         });
+//     }
+//   }
+// }

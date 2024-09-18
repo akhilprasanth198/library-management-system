@@ -1,24 +1,30 @@
-import { Component } from '@angular/core';
+import { Component ,OnInit} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BookService } from '../services/book-service.service';
+import { CommonModule, NgFor } from '@angular/common';
+import { Book } from '../model/book';
+
 @Component({
   selector: 'app-search',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule,NgFor,CommonModule],
   templateUrl: './search.component.html',
-  styleUrl: './search.component.css'
+  styleUrls: ['./search.component.css']
 })
-export class SearchComponent {
-  author = '';
-  title = '';
-  language = '';
+export class SearchComponent implements OnInit {
+  books: Book[] = [];
+  author: string = '';
+  language: string = '';
+  title: string = '';
 
-  constructor(private bookService: BookService) {}
+  constructor(private bookService: BookService) { }
 
-  onSearch() {
-    this.bookService.searchBooks(this.author, this.title, this.language)
-      .subscribe(result => {
-        console.log(result); // Display search results
+  ngOnInit(): void { }
+
+  search(): void {
+    this.bookService.searchBooks(this.author, this.language, this.title)
+      .subscribe((result: Book[]) => {
+        this.books = result;
       });
   }
 }

@@ -9,8 +9,8 @@ import { AdminRegistrationComponent } from './login/admin-registration/admin-reg
 import { SearchComponent } from './search/search.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
-import { BorrowBookComponent } from './borrow-book/borrow-book.component';
-import { ReturnBookComponent } from './return-book/return-book.component';
+// import { BorrowBookComponent } from './borrow-book/borrow-book.component';
+// import { ReturnBookComponent } from './return-book/return-book.component';
 import { LoginComponent } from './login/login.component';
 
 import { UserDetailsComponent } from './user-details/user-details.component';
@@ -44,8 +44,8 @@ import { BookDetailsComponent } from './book-details/book-details.component';
         {path :'user-details',component:UserDetailsComponent},
         {path : 'user-dashboard', component:UserDashboardComponent},
         { path: 'admin-dashboard', component: AdminDashboardComponent },
-        { path: 'borrow-book', component: BorrowBookComponent },
-        { path: 'return-book', component: ReturnBookComponent },
+        // { path: 'borrow-book', component: BorrowBookComponent },
+        // { path: 'return-book', component: ReturnBookComponent },
         { path: 'book-details', component: BookDetailsComponent },
         { path: '**', redirectTo: 'home' }  // Wildcard route for 404 page, can customize as needed
     ];

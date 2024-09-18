@@ -4,12 +4,13 @@ import { BookService } from '../services/book-service.service';
 import { UserService } from '../services/user.service';
 import { FormsModule } from '@angular/forms';
 import { NgFor } from '@angular/common';
+import { NavbarComponent } from "../navbar/navbar.component";
 
 
 @Component({
   selector: 'app-user-dashboard',
   standalone: true,
-  imports: [RouterLink,RouterOutlet,FormsModule,NgFor],
+  imports: [RouterLink, RouterOutlet, FormsModule, NgFor, NavbarComponent],
   templateUrl: './user-dashboard.component.html',
   styleUrl: './user-dashboard.component.css'
 })

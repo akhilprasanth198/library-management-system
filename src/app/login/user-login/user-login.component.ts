@@ -24,7 +24,7 @@ export class UserLoginComponent {
     {
       console.log(result);
       if(result && result.message=='Login successful'){
-        this.router.navigateByUrl('admin-dashboard');
+        this.router.navigateByUrl('user-dashboard');
       }
       
     },
