@@ -5,12 +5,13 @@ import { UserService } from '../services/user.service';
 import { FormsModule } from '@angular/forms';
 import { NgFor } from '@angular/common';
 import { NavbarComponent } from "../navbar/navbar.component";
+import { SearchComponent } from "../search/search.component";
 
 
 @Component({
   selector: 'app-user-dashboard',
   standalone: true,
-  imports: [RouterLink, RouterOutlet, FormsModule, NgFor, NavbarComponent],
+  imports: [RouterLink, RouterOutlet, FormsModule, NgFor, NavbarComponent, SearchComponent],
   templateUrl: './user-dashboard.component.html',
   styleUrl: './user-dashboard.component.css'
 })
@@ -19,11 +20,5 @@ export class UserDashboardComponent {
     books: any[] = [];
   
     constructor(private bookService: BookService) {}
-  
-    
-    // searchBooks() {
-    //   this.bookService.searchBooks(this.searchTitle).subscribe((data) => {
-    //     this.books = data;
-    //   });
-    // }
+
 }

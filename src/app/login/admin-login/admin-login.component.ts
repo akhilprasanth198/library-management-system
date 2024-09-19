@@ -4,10 +4,11 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { AdminService } from '../../services/admin.service';
+import { NavbarComponent } from '../../navbar/navbar.component';
 @Component({
   selector: 'app-admin-login',
   standalone: true,
-  imports:[RouterOutlet,RouterLink,FormsModule,CommonModule],
+  imports:[RouterOutlet,RouterLink,FormsModule,CommonModule,NavbarComponent],
   templateUrl: './admin-login.component.html',
   styleUrl: './admin-login.component.css'
 })
