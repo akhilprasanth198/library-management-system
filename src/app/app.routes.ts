@@ -15,6 +15,7 @@ import { LoginComponent } from './login/login.component';
 
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
+import { UserSearchComponent } from './user-search/user-search.component';
     export const routes: Routes = [
         { path: '', redirectTo: 'home', pathMatch: 'full' }, // Redirect root path to home
         { path: 'home', component: HomeComponent },
@@ -47,6 +48,7 @@ import { BookDetailsComponent } from './book-details/book-details.component';
         // { path: 'borrow-book', component: BorrowBookComponent },
         // { path: 'return-book', component: ReturnBookComponent },
         { path: 'book-details', component: BookDetailsComponent },
+        { path: 'user-search', component: UserSearchComponent },
         { path: '**', redirectTo: 'home' }  // Wildcard route for 404 page, can customize as needed
     ];
 
