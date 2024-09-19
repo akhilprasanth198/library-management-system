@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component,inject} from '@angular/core';
 import { NavbarComponent } from "../navbar/navbar.component";
 import { RouterOutlet } from '@angular/router';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-about',
   standalone: true,
@@ -10,5 +10,5 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './about.component.css'
 })
 export class AboutComponent {
-
+  
 }

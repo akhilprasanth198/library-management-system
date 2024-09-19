@@ -17,8 +17,7 @@ export class UserRegistrationComponent {
     name:'',
     email:'',
     password:''
-   
-    
+
   }
   
   registerService= inject(RegisterService);
@@ -28,7 +27,7 @@ export class UserRegistrationComponent {
       this.registerService.onRegisterSubmit(this.registerobject).subscribe(
         (result: any) => {
           console.log('Registration successful:', result);
-          // Optionally navigate to another page or show a success message
+          this.router.navigateByUrl('/login/user-login');
         },
         (error)=>
         {

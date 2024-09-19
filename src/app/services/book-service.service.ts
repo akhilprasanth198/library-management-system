@@ -37,4 +37,9 @@ export class BookService {
     return this.http.post('https://localhost:7174/api/Books',userobj)
 
   }
+  // ondelbook(){
+  //   console.log(userobj);
+    
+  //   return this.http.post('https://localhost:7174/api/Books',userobj)
+  // }
 }

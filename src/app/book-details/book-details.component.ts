@@ -22,4 +22,21 @@ export class BookDetailsComponent {
       });
       
   }
+  
+  // Method to delete a book by ID
+  delBook(bookId: number) {
+    const confirmDelete = confirm('Are you sure you want to delete this book?');
+    if (confirmDelete) {
+      this.httpclient.delete(`https://localhost:7174/api/Books/${bookId}`).subscribe({
+        next: () => {
+          console.log('Book deleted successfully');
+          // Optionally refresh the book list after deletion
+          this.getBookDetails();
+        },
+        error: (err) => {
+          console.error('Error deleting book:', err);
+        }
+      });
+    }
+  }
 }

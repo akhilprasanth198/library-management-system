@@ -10,6 +10,8 @@
             Language : {{books.language}}<br>
             Category : {{books.category}}<br>
             Quantity :{{books.quantity}}
+            <br>
+            <button type="submit" (click)="delBook(books.id)">Delete</button>
         }
         </li>
     </ul>
