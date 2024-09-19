@@ -1,12 +1,39 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component ,inject} from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { Router, RouterOutlet } from '@angular/router';
+import { BookService } from '../services/book-service.service';
+
 
 @Component({
   selector: 'app-addbook',
   standalone: true,
-  imports: [],
+  imports: [FormsModule,CommonModule,RouterOutlet,FormsModule],
   templateUrl: './addbook.component.html',
   styleUrl: './addbook.component.css'
 })
 export class AddbookComponent {
+  addobj:any={
+    title:'',
+    author:'',
+    language:'',
+    category:'',
+    quantity:0
+  }
+  addservice=inject(BookService);
+  router=inject(Router);
+addbook(){
+  
+      this.addservice.onAddbook(this.addobj).subscribe(
+        (result: any) => {
+          console.log('Book Added:', result);
+          alert('Book added')
+          // Optionally navigate to another page or show a success message
+        },
+        (error)=>
+        {
+          alert("Book adding failed" )
+        });
 
+  }
 }

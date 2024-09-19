@@ -28,4 +28,13 @@ export class BookService {
 
     return this.http.get<Book[]>(this.apiUrl, { params });
   }
+
+
+  onAddbook(userobj:any)
+  {
+    console.log(userobj);
+    
+    return this.http.post('https://localhost:7174/api/Books',userobj)
+
+  }
 }

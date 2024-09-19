@@ -12,10 +12,12 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
 // import { BorrowBookComponent } from './borrow-book/borrow-book.component';
 // import { ReturnBookComponent } from './return-book/return-book.component';
 import { LoginComponent } from './login/login.component';
+import { AddbookComponent } from './addbook/addbook.component';
 
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
 import { UserSearchComponent } from './user-search/user-search.component';
+import path from 'path';
     export const routes: Routes = [
         { path: '', redirectTo: 'home', pathMatch: 'full' }, // Redirect root path to home
         { path: 'home', component: HomeComponent },
@@ -49,7 +51,8 @@ import { UserSearchComponent } from './user-search/user-search.component';
         // { path: 'return-book', component: ReturnBookComponent },
         { path: 'book-details', component: BookDetailsComponent },
         { path: 'user-search', component: UserSearchComponent },
-        { path: '**', redirectTo: 'home' }  // Wildcard route for 404 page, can customize as needed
+        { path: '**', redirectTo: 'home' },  // Wildcard route for 404 page, can customize as needed
+        { path:'add-book',component:AddbookComponent}
     ];
 
 @NgModule({
