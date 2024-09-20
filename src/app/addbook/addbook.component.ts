@@ -1,9 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component ,inject} from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { Router, RouterOutlet } from '@angular/router';
 import { BookService } from '../services/book-service.service';
-
 
 @Component({
   selector: 'app-addbook',
@@ -27,12 +26,11 @@ addbook(){
       this.addservice.onAddbook(this.addobj).subscribe(
         (result: any) => {
           console.log('Book Added:', result);
-          alert('Book added')
-          // Optionally navigate to another page or show a success message
+          alert('Book added');
         },
         (error)=>
         {
-          alert("Book adding failed" )
+          alert("Book adding failed" );
         });
 
   }

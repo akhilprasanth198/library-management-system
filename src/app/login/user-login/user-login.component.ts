@@ -4,10 +4,11 @@ import { FormsModule } from '@angular/forms';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { Router } from '@angular/router';
 import { UserService } from '../../services/user.service';
+import { NavbarComponent } from "../../navbar/navbar.component";
 @Component({
   selector: 'app-user-login',
   standalone: true,
-  imports: [RouterLink,FormsModule,CommonModule],
+  imports: [RouterLink,RouterOutlet, FormsModule, CommonModule, NavbarComponent],
   templateUrl: './user-login.component.html',
   styleUrl: './user-login.component.css'
 })

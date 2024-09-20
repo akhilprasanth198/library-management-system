@@ -1,100 +1,61 @@
-/* Align the form to the left */
-form {
-    max-width: 400px;
-    margin: 0 auto; /* Centers the form horizontally on the page */
+ /* CSS for the search form */
+ form {
+    margin: 20px 0;
     padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: left; /* Aligns the form elements to the left */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
-/* Align input fields and labels */
 form div {
     margin-bottom: 15px;
-    text-align: left;
 }
 
-form label {
-    display: block;
-    margin-bottom: 5px;
+label {
+    display: inline-block;
+    width: 100px;
     font-weight: bold;
-    font-size: 14px;
-    color: #333;
 }
 
-form input {
-    width: 100%; /* Takes the full width of the form */
-    padding: 10px;
-    margin: 0 auto;
+input {
+    padding: 8px;
+    width: 250px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 14px;
 }
 
-/* Button styling */
-form button {
-    padding: 10px 20px;
+button {
+    padding: 10px 15px;
     background-color: #007bff;
     color: white;
     border: none;
     border-radius: 4px;
-    font-size: 16px;
     cursor: pointer;
+    font-size: 14px;
 }
 
-form button:hover {
+button:hover {
     background-color: #0056b3;
 }
 
-/* Style for the user details container */
-.user-details {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: left; /* Ensures all content inside is aligned to the left */
+/* CSS for the search results */
+h3 {
+    margin-top: 30px;
 }
 
-/* Header styling for user details */
-.user-details h3 {
-    text-align: left; /* Aligns the header to the left */
-    margin-bottom: 20px;
-    font-size: 18px;
-    color: #333;
-}
-
-/* Styling for each user */
-.user-details ul {
-    list-style: none;
+ul {
+    list-style-type: none;
     padding: 0;
-    margin: 0;
 }
 
-.user-details li {
-    margin-bottom: 10px;
-    padding: 15px;
-    background-color: #f9f9f9;
+li {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f1f1f1;
     border: 1px solid #ddd;
-    border-radius: 4px;
-    text-align: left; /* Ensures each user detail is aligned to the left */
+    border-radius: 5px;
 }
 
-/* Inner user details */
-.user-details li ul {
-    padding: 0;
-    list-style: none;
-}
-
-.user-details li ul li {
-    font-size: 16px;
-    margin-bottom: 5px;
-    color: #555;
-    text-align: left; /* Ensures text is aligned left */
-}
-
-.user-details li ul li:last-child {
-    margin-bottom: 0;
+li:hover {
+    background-color: #e9ecef;
 }

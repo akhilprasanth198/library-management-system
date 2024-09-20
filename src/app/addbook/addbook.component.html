@@ -1,13 +1,28 @@
 <div class="login-page">
     <div class="login-container">
-        <h2>User Login</h2>
-        <form>
-            <input type="text" name="tittle" placeholder="Tittle" [(ngModel)]="addobj.title" required />
-            <input type="text" name="author" placeholder="Author" [(ngModel)]="addobj.author" required />
-            <input type="text" name="language" placeholder="Language" [(ngModel)]="addobj.language" required />
-            <input type="text" name="category" placeholder="Category" [(ngModel)]="addobj.category" required />
-            <input type="number" name="quantity" placeholder="Quantity" [(ngModel)]="addobj.quantity" required />
-            <button type="submit" (click)="addbook()">Add</button>
+        <h2>Add Book</h2>
+        <form (submit)="addbook()">
+            <div>
+                <label>Title: </label>
+                <input name="tittle" [(ngModel)]="addobj.title" required />
+            </div>
+            <div>
+                <label>Author: </label>
+                <input name="author" [(ngModel)]="addobj.author" required />
+            </div>
+            <div>
+                <label>Language: </label>
+                <input name="language" [(ngModel)]="addobj.language" required />
+            </div>
+            <div>
+                <label>Category: </label>
+                <input name="category" [(ngModel)]="addobj.category" required />
+            </div>
+            <div>
+                <label>Quantity: </label>
+                <input name="quantity" [(ngModel)]="addobj.quantity" required /><br>
+            </div>
+            <button type="submit">Add</button>
         </form>
     </div>
 </div>
