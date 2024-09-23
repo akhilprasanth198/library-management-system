@@ -1,42 +1,43 @@
-import { Component, importProvidersFrom } from '@angular/core';
+import { Component, importProvidersFrom, inject } from '@angular/core';
 import { BookService } from '../services/book-service.service';
-import { HttpClient } from '@angular/common/http';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { NgFor, NgIf } from '@angular/common';
+import { Book } from '../model/book';
+import { FormsModule } from '@angular/forms';
 @Component({
-  selector: 'app-book-details',
-  standalone: true,
-  imports: [RouterOutlet,RouterLink,NgFor,NgIf],
-  templateUrl: './book-details.component.html',
-  styleUrl: './book-details.component.css'
+        selector: 'app-book-details',
+        standalone: true,
+        imports: [RouterOutlet,RouterLink,NgFor,NgIf,FormsModule],
+        templateUrl: './book-details.component.html',
+        styleUrl: './book-details.component.css'
 })
 export class BookDetailsComponent {
-  book : any[]=[];
-  constructor(private httpclient:HttpClient){}
-  getBookDetails()
-  {
-    this.httpclient.get('https://localhost:7174/api/Books').subscribe((result:any) =>
-      {
-        this.book = result;
-        console.log('Book Details :',this.book );
-      });
-      
-  }
-  
-  // Method to delete a book by ID
-  delBook(bookId: number) {
-    const confirmDelete = confirm('Are you sure you want to delete this book?');
-    if (confirmDelete) {
-      this.httpclient.delete(`https://localhost:7174/api/Books/${bookId}`).subscribe({
-        next: () => {
-          console.log('Book deleted successfully');
-          // Optionally refresh the book list after deletion
-          this.getBookDetails();
-        },
-        error: (err) => {
-          console.error('Error deleting book:', err);
-        }
+books: Book[] = [];
+bookname: string = '';
+constructor(private booksService: BookService) { }
+router = inject(Router);
+ngOnInit(): void { }
+onSearch() {
+  if (this.bookname.trim()) {
+      this.booksService.searchBook(this.bookname).subscribe((books: Book[]) => {
+      this.books = books;
       });
     }
-  }
+}
+// Method to delete a book by ID
+deleteBook(bookId: number): void {
+      const confirmDelete = confirm('Are you sure you want to delete this book?');
+      if (confirmDelete) {
+        this.booksService.delbook(bookId).subscribe(
+          (response: { message: string }) => {
+            alert(response.message); // Show confirmation message
+            this.onSearch(); // Refresh book list
+            this.router.navigateByUrl('/books');
+          },
+          (error: HttpErrorResponse) => {
+            alert('Error deleting book: ' + error.message);
+        });
+      }
+    }
 }

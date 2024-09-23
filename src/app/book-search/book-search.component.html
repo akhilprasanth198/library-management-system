@@ -1,0 +1,15 @@
+    <div>
+        <input type="text" [(ngModel)]="bookname" placeholder="Search for books">
+        <button (click)="onSearch()">Search</button>
+    </div>
+    
+    <div *ngIf="books.length > 0">
+        <ul>
+        <li *ngFor="let book of books">
+            {{ book.title }} by {{ book.author }} ({{ book.language }}) - {{ book.quantity }} available
+            <button *ngIf="book.quantity > 0" (click)="borrowBook(book.id)">Borrow</button>
+            <span *ngIf="book.quantity <= 0">Not Available</span>
+        </li>
+        </ul>
+    </div>
+    

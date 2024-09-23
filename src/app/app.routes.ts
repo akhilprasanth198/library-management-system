@@ -15,7 +15,7 @@
     import { BookDetailsComponent } from './book-details/book-details.component';
     import { UserSearchComponent } from './user-search/user-search.component';
     import { NavlogComponent } from './navlog/navlog.component';
-
+    import { BookSearchComponent } from './book-search/book-search.component';
     export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },  // Keep only one default redirect
     { path: 'home', component: HomeComponent },
@@ -35,6 +35,7 @@
     { path: 'user-search', component: UserSearchComponent },
     { path: 'navlog', component: NavlogComponent },
     { path: 'add-book', component: AddbookComponent },
+    {path:'books',component:BookSearchComponent},
     ];
 
     @NgModule({
