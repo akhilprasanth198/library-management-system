@@ -6,13 +6,13 @@ import { NgFor, NgIf } from '@angular/common';
 import { Book } from '../model/book';
 import { FormsModule } from '@angular/forms';
 @Component({
-        selector: 'app-book-details',
+        selector: 'app-del-book',
         standalone: true,
         imports: [RouterOutlet,RouterLink,NgFor,NgIf,FormsModule],
-        templateUrl: './book-details.component.html',
-        styleUrl: './book-details.component.css'
+        templateUrl: './delbook.component.html',
+        styleUrl: './delbook.component.css'
 })
-export class BookDetailsComponent {
+export class DelBookComponent {
 books: Book[] = [];
 bookname: string = '';
 constructor(private booksService: BookService) { }

@@ -12,7 +12,7 @@
     import { LoginComponent } from './login/login.component';
     import { AddbookComponent } from './addbook/addbook.component';
     import { UserDetailsComponent } from './user-details/user-details.component';
-    import { BookDetailsComponent } from './book-details/book-details.component';
+    import {DelBookComponent } from './delbook/delbook.component';
     import { UserSearchComponent } from './user-search/user-search.component';
     import { NavlogComponent } from './navlog/navlog.component';
     import { BookSearchComponent } from './book-search/book-search.component';
@@ -31,7 +31,7 @@
     { path: 'user-details', component: UserDetailsComponent },
     { path: 'user-dashboard', component: UserDashboardComponent },
     { path: 'admin-dashboard', component: AdminDashboardComponent },
-    { path: 'book-details', component: BookDetailsComponent },
+    { path: 'del-book', component:DelBookComponent  },
     { path: 'user-search', component: UserSearchComponent },
     { path: 'navlog', component: NavlogComponent },
     { path: 'add-book', component: AddbookComponent },
