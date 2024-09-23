@@ -34,7 +34,7 @@ import { BookSearchComponent } from './book-search/book-search.component';
             { path: 'add-book', component: AddbookComponent },
             { path: 'user-search', component: UserSearchComponent },
 
-          ]
+        ]
     },
     {path:'userNav',component:UsernavComponent,
         children: [
@@ -42,7 +42,7 @@ import { BookSearchComponent } from './book-search/book-search.component';
             { path: 'borrow', component:BookSearchComponent },
             { path: 'user-details', component:UserDetailsComponent },
 
-          ]
+        ]
     },
 
     { path: 'about', component: AboutComponent },
