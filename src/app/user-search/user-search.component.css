@@ -1,6 +1,7 @@
  /* CSS for the search form */
- form {
-    margin: 20px 0;
+form {
+    display: table;
+    margin: 20px 36% 20px 36%;
     padding: 20px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
@@ -26,7 +27,7 @@ input {
 
 button {
     padding: 10px 15px;
-    background-color: #007bff;
+    background-color: #178582;
     color: white;
     border: none;
     border-radius: 4px;
@@ -35,14 +36,16 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #145c63;
 }
 
 /* CSS for the search results */
 h3 {
     margin-top: 30px;
 }
-
+h2{
+    text-align: center;
+}
 ul {
     list-style-type: none;
     padding: 0;

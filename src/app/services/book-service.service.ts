@@ -7,8 +7,9 @@ import { Book } from '../model/book';
   providedIn: 'root'
 })
 export class BookService {
+  
   private apiUrl = 'https://localhost:7174/api/Books/search';
-
+  private apiUrls = 'https://localhost:7174/api/Books';
   constructor(private http: HttpClient) { }
 
   searchBooks(author?: string, language?: string, title?: string): Observable<Book[]> {
@@ -37,9 +38,16 @@ export class BookService {
     return this.http.post('https://localhost:7174/api/Books',userobj)
 
   }
-  // ondelbook(){
-  //   console.log(userobj);
-    
-  //   return this.http.post('https://localhost:7174/api/Books',userobj)
-  // }
+  
+  searchBook(bookname: string): Observable<Book[]> {
+    return this.http.get<Book[]>(`${this.apiUrls}/searches?bookname=${bookname}`);
+  }
+
+  borrowBook(bookId: number, userId: number): Observable<any> {
+    return this.http.post(`${this.apiUrls}/borrow/${bookId}/${userId}`, {});
+  }
+  
+  delbook(bookId : number): Observable<any> {
+    return this.http.delete(`https://localhost:7174/api/Books/${bookId}`);
+  }
 }

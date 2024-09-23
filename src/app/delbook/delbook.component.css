@@ -1,0 +1,97 @@
+/* Container for the search bar and button */
+div {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Input field styling */
+input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-right: 10px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #145c63;
+}
+
+/* Search button styling */
+button {
+    padding: 10px 20px;
+    background-color: #178582;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #145c63;
+}
+
+/* Styling for the book list */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+li {
+    padding: 30px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    display: flexbox;
+    justify-content: space-between;
+    align-items: center;
+}
+h3{
+    align-content: center;
+}
+/* Borrow button styling */
+li button {
+    background-color: #145c63;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+li button:hover {
+    background-color: #178582;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 600px) {
+    div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input[type="text"] {
+        width: 90%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    ul {
+        padding-left: 0;
+    }
+
+    li {
+        flex-direction: column;
+        text-align: center;
+    }
+}

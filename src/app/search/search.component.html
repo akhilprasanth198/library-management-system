@@ -1,16 +1,16 @@
     <div>
         <h2>Search Books</h2>
-        <form (submit)="search()">
+        <form (click)="search()">
         <div>
-            <label>Author: </label>
+            <label>Author </label>
             <input [(ngModel)]="author" name="author" required/>
         </div>
         <div>
-            <label>Language: </label>
+            <label>Language </label>
             <input [(ngModel)]="language" name="language" required />
         </div>
         <div>
-            <label>Title: </label>
+            <label>Title </label>
             <input [(ngModel)]="title" name="title" required />
         </div>
         <button type="submit">Search</button>
@@ -18,7 +18,7 @@
     </div>
     
     <div *ngIf="books.length > 0">
-        <h3>Search Results</h3>
+        <h3 >Search Results</h3>
         <ul>
         <li *ngFor="let book of books">
             {{ book.title }} by {{ book.author }} ({{ book.language }})

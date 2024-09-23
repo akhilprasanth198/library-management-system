@@ -12,7 +12,6 @@
     import { LoginComponent } from './login/login.component';
     import { AddbookComponent } from './addbook/addbook.component';
     import { UserDetailsComponent } from './user-details/user-details.component';
-    import { BookDetailsComponent } from './book-details/book-details.component';
     import { UserSearchComponent } from './user-search/user-search.component';
     import { NavlogComponent } from './navlog/navlog.component';
 import { UsernavComponent } from './usernav/usernav.component';

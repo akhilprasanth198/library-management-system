@@ -1,14 +1,17 @@
  /* CSS for the search form */
     form {
-        margin: 20px 0;
-        padding: 20px;
+        display:table;
+        margin: 20px 35% 20px 35%;
+        padding: 30px;
         background-color: #f9f9f9;
         border: 1px solid #ddd;
         border-radius: 5px;
+        
     }
     
     form div {
         margin-bottom: 15px;
+        
     }
     
     label {
@@ -26,7 +29,7 @@
     
     button {
         padding: 10px 15px;
-        background-color: #007bff;
+        background-color: #178582;
         color: white;
         border: none;
         border-radius: 4px;
@@ -35,14 +38,18 @@
     }
     
     button:hover {
-        background-color: #0056b3;
+        background-color: #145c63;
     }
     
     /* CSS for the search results */
     h3 {
+        
         margin-top: 30px;
     }
-    
+    h2{
+        text-align: center;
+        text-shadow: #ccc;
+    }
     ul {
         list-style-type: none;
         padding: 0;
@@ -60,12 +67,3 @@
         background-color: #e9ecef;
     }
     
-/* .search-section input {
-    padding: 15px;
-    width: 250px;
-    border: 2px solid #BFA181; 
-    border-radius: 5px;
-    font-size: 1rem;
-    background-color: #ffffff;
-    color: #0A1828; 
-} */
