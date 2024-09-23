@@ -12,13 +12,21 @@
         
         /* Home Page */
         .home-page {
-                min-height: 100vh;
+                min-height: 50vh;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 background-color: #f9f9f9;
         }
-        
+        .background {
+                background-image: url('/books.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 100vh;
+                width: 100%;
+        }
+
         /* Navbar */
         .navbar {
                 display: flex;
@@ -97,4 +105,8 @@
                 display: block;
                 opacity: 1;
                 visibility: visible;
+        }
+        .search{
+                color:#0A1828;
+                margin-top: 200px;
         }

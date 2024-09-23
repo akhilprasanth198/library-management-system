@@ -1,14 +1,17 @@
  /* CSS for the search form */
     form {
-        margin: 20px 0;
-        padding: 20px;
+        display:table;
+        margin: 20px 35% 20px 35%;
+        padding: 30px;
         background-color: #f9f9f9;
         border: 1px solid #ddd;
         border-radius: 5px;
+        
     }
     
     form div {
         margin-bottom: 15px;
+        
     }
     
     label {
@@ -40,9 +43,12 @@
     
     /* CSS for the search results */
     h3 {
+        
         margin-top: 30px;
     }
-    
+    h2{
+        text-align: center;
+    }
     ul {
         list-style-type: none;
         padding: 0;
@@ -60,12 +66,3 @@
         background-color: #e9ecef;
     }
     
-/* .search-section input {
-    padding: 15px;
-    width: 250px;
-    border: 2px solid #BFA181; 
-    border-radius: 5px;
-    font-size: 1rem;
-    background-color: #ffffff;
-    color: #0A1828; 
-} */
