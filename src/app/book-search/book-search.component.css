@@ -99,7 +99,9 @@ span {
         text-align: center;
     }
 }
-
+h3{
+    align-content: center;
+}
 
 table {
     width: 100%;
