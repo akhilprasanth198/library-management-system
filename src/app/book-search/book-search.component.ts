@@ -22,10 +22,19 @@ export class BookSearchComponent implements OnInit {
   onSearch() {
     if (this.bookname.trim()) {
       this.bookService.searchBook(this.bookname).subscribe((books: Book[]) => {
+        console.log("Books found: ", books);
         this.books = books;
       });
     }
   }
+  
+  // onSearch() {
+  //   if (this.bookname.trim()) {
+  //     this.bookService.searchBook(this.bookname).subscribe((books: Book[]) => {
+  //       this.books = books;
+  //     });
+  //   }
+  // }
 
   borrowBook(bookId: number) {
     const userId = 1; // Get this dynamically from logged-in user
