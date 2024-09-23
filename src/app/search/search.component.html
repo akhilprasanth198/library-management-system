@@ -16,13 +16,23 @@
         <button type="submit">Search</button>
         </form>
     </div>
-    
     <div *ngIf="books.length > 0">
-        <h3 >Search Results</h3>
-        <ul>
-        <li *ngFor="let book of books">
-            {{ book.title }} by {{ book.author }} ({{ book.language }})
-        </li>
-        </ul>
+        <h3>Search Results</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Book Title</th>
+                    <th>Author</th>
+                    <th>Language</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let book of books">
+                    <td>{{ book.title }}</td>
+                    <td>{{ book.author }}</td>
+                    <td>{{ book.language }}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     
