@@ -5,8 +5,54 @@
     <input type="text" [(ngModel)]="bookname" placeholder="Search for books">
     <button (click)="onSearch()">Search</button>
 </div>
+ <div *ngIf="books.length > 0">
+    <table>
+        <thead>
+            <tr>
+                <th>Book Title</th>
+                <th>Book ID</th>
+                <th>Author</th>
+                <th>Language</th>
+                <th>Category</th>
+                <th>Quantity</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let book of books">
+                <td>{{ book.title }}</td>
+                <td>{{ book.id }}</td>
+                <td>{{ book.author }}</td>
+                <td>{{ book.language }}</td>
+                <td>{{ book.category }}</td>
+                <td>{{ book.quantity }}</td>
+                <td>
+                    <button type="button" (click)="deleteBook(book.id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div> 
 
-<div *ngIf="books.length > 0">
+
+<!-- <div *ngIf="books.length > 0"></div>
+    <ul>
+        <li>
+            @for (books of books; track books) {
+                <h3>{{books.title}}</h3>
+                Book Id : {{books.id}}
+                Author  : {{books.author}}
+                Language : {{books.language}}
+                Category : {{books.category}}
+                Quantity :{{books.quantity}}
+                
+                <button type="submit" (click)="deleteBook(books.id)">Delete</button>
+            }
+        </li>
+    </ul> -->
+
+
+<!-- <div *ngIf="books.length > 0">
     <ul>
         <li>
             @for (books of books; track books) {
@@ -21,4 +67,4 @@
             }
         </li>
     </ul>
-</div>
+</div> -->

@@ -2,8 +2,34 @@
         <input type="text" [(ngModel)]="bookname" placeholder="Search for books">
         <button (click)="onSearch()">Search</button>
     </div>
-    
     <div *ngIf="books.length > 0">
+        <table>
+            <thead>
+                <tr>
+                    <th>Book Title</th>
+                    <th>Author</th>
+                    <th>Language</th>
+                    <th>Quantity</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let book of books">
+                    <td>{{ book.title }}</td>
+                    <td>{{ book.author }}</td>
+                    <td>{{ book.language }}</td>
+                    <td>{{ book.quantity }}</td>
+                    <td>
+                        <button *ngIf="book.quantity > 0" (click)="borrowBook(book.id)">Borrow</button>
+                        <span *ngIf="book.quantity <= 0">Not Available</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    
+    <!-- <div *ngIf="books.length > 0">
         <ul>
         <li *ngFor="let book of books">
             {{ book.title }} by {{ book.author }} ({{ book.language }}) - {{ book.quantity }} available
@@ -11,5 +37,5 @@
             <span *ngIf="book.quantity <= 0">Not Available</span>
         </li>
         </ul>
-    </div>
+    </div> -->
     
