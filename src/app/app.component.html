@@ -1,2 +1,4 @@
-<router-outlet></router-outlet>  
-
+<div *ngIf="!isDashboardRoute">
+    <app-navbar></app-navbar>
+</div>
+<router-outlet></router-outlet>

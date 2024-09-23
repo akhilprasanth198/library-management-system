@@ -1,13 +1,10 @@
 import { Component } from '@angular/core';
-import { NavbarComponent } from "../navbar/navbar.component";
-import { SearchComponent } from "../search/search.component";
-import { UserSearchComponent } from "../user-search/user-search.component";
-import { AddbookComponent } from '../addbook/addbook.component';
 import { NavlogComponent } from '../navlog/navlog.component';
+import { RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-admin-dashboard',
   standalone: true,
-  imports: [NavlogComponent, SearchComponent, UserSearchComponent,AddbookComponent],
+  imports: [NavlogComponent,RouterOutlet],
   templateUrl: './admin-dashboard.component.html',
   styleUrl: './admin-dashboard.component.css'
 })

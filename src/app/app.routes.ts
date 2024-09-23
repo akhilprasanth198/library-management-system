@@ -15,6 +15,7 @@
     import { BookDetailsComponent } from './book-details/book-details.component';
     import { UserSearchComponent } from './user-search/user-search.component';
     import { NavlogComponent } from './navlog/navlog.component';
+import { UsernavComponent } from './usernav/usernav.component';
 
     export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },  // Keep only one default redirect
@@ -26,15 +27,29 @@
         { path: 'admin-registration', component: AdminRegistrationComponent }
         ]
     },
+    {path:'adminNav',component:NavlogComponent,
+        children: [
+            { path: 'book-search', component: SearchComponent },
+            { path: 'add-book', component: AddbookComponent },
+            { path: 'user-search', component: UserSearchComponent },
+
+          ]
+    },
+    {path:'userNav',component:UsernavComponent,
+        children: [
+            { path: 'book-search', component: SearchComponent },
+            { path: '', component: AddbookComponent },
+
+          ]
+    },
+
     { path: 'about', component: AboutComponent },
-    { path: 'book-search', component: SearchComponent },
-    { path: 'user-details', component: UserDetailsComponent },
-    { path: 'user-dashboard', component: UserDashboardComponent },
-    { path: 'admin-dashboard', component: AdminDashboardComponent },
-    { path: 'book-details', component: BookDetailsComponent },
-    { path: 'user-search', component: UserSearchComponent },
+    // { path: 'book-search', component: SearchComponent },
+    // { path: 'user-dashboard', component: UserDashboardComponent },
+    // { path: 'admin-dashboard', component: AdminDashboardComponent },
+    // { path: 'book-details', component: BookDetailsComponent },
+    // { path: 'user-search', component: UserSearchComponent },
     { path: 'navlog', component: NavlogComponent },
-    { path: 'add-book', component: AddbookComponent },
     ];
 
     @NgModule({

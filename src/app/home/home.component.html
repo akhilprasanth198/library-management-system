@@ -1,26 +1,2 @@
-    <!-- home.component.html -->
-    <div class="home-page">
-        <!-- Navbar and Site Name -->
-        <header class="navbar">
-        <h1 class="site-name">Library Management System</h1>
-        <nav>
-            <ul>
-            <li><a routerLink="/">Home</a></li>
-            <li><a routerLink="/about">About</a></li>
-            <li class="dropdown">
-                <a href="#">Login</a>
-                <ul class="dropdown-content">
-                <li><a routerLink="/login/user-login">User Login</a></li>
-                <li><a routerLink="/login/admin-login">Admin Login</a></li>
-                <li><a routerLink="/login/user-registration">User Registration</a></li>
-                <!-- <li><a routerLink="/login/admin-registration">Admin Registration</a></li> -->
-                </ul>
-            </li>
-            </ul>
-        </nav>
-        </header>
-    
-        <!-- Search Section -->
-        <app-search></app-search>
-    </div>
+     <app-search></app-search>
     <router-outlet></router-outlet>

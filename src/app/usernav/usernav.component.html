@@ -1,0 +1,14 @@
+<!-- Navbar and Site Name -->
+<header class="navbar">
+    <h1 class="site-name">Library Management System</h1>
+    <nav>
+        <ul>
+            <li><a routerLink="/userNav/book-search" routerLinkActive="active">Search Book</a></li>
+            <li><a routerLink="/userNav/" routerLinkActive="active">Borrow book</a></li>
+            <li><a routerLink="/userNav/" routerLinkActive="active"> User Profile</a></li>
+
+            <li><a (click)="onLogout()">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+<router-outlet></router-outlet>
