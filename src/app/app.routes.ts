@@ -16,6 +16,7 @@
     import { NavlogComponent } from './navlog/navlog.component';
 import { UsernavComponent } from './usernav/usernav.component';
 import { BookSearchComponent } from './book-search/book-search.component';
+import { DelBookComponent } from './delbook/delbook.component';
 
     export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },  // Keep only one default redirect
@@ -33,6 +34,7 @@ import { BookSearchComponent } from './book-search/book-search.component';
             { path: 'book-search', component: SearchComponent },
             { path: 'add-book', component: AddbookComponent },
             { path: 'user-search', component: UserSearchComponent },
+            {path: 'del-book',component:DelBookComponent},
 
         ]
     },
