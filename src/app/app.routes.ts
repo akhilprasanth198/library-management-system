@@ -15,11 +15,13 @@
     import { UserSearchComponent } from './user-search/user-search.component';
     import { NavlogComponent } from './navlog/navlog.component';
 import { UsernavComponent } from './usernav/usernav.component';
+import { BookSearchComponent } from './book-search/book-search.component';
 
     export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },  // Keep only one default redirect
     { path: 'home', component: HomeComponent },
-    { path: 'login', component: LoginComponent, children: [
+    { path: 'login', component: LoginComponent, 
+        children: [
     { path: 'user-login', component: UserLoginComponent },
         { path: 'user-registration', component: UserRegistrationComponent },
         { path: 'admin-login', component: AdminLoginComponent },
@@ -37,17 +39,15 @@ import { UsernavComponent } from './usernav/usernav.component';
     {path:'userNav',component:UsernavComponent,
         children: [
             { path: 'book-search', component: SearchComponent },
-            { path: '', component: AddbookComponent },
+            { path: 'borrow', component:BookSearchComponent },
+            { path: 'user-details', component:UserDetailsComponent },
 
           ]
     },
 
     { path: 'about', component: AboutComponent },
-    // { path: 'book-search', component: SearchComponent },
-    // { path: 'user-dashboard', component: UserDashboardComponent },
-    // { path: 'admin-dashboard', component: AdminDashboardComponent },
-    // { path: 'book-details', component: BookDetailsComponent },
-    // { path: 'user-search', component: UserSearchComponent },
+    { path: 'user-dashboard', component: UserDashboardComponent },
+    { path: 'admin-dashboard', component: AdminDashboardComponent },
     { path: 'navlog', component: NavlogComponent },
     ];
 

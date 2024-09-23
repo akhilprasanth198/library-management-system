@@ -7,11 +7,12 @@ import { NgFor } from '@angular/common';
 import { SearchComponent } from "../search/search.component";
 import { NavbarComponent } from '../navbar/navbar.component';
 import { NavlogComponent } from '../navlog/navlog.component';
+import { UsernavComponent } from "../usernav/usernav.component";
 
 @Component({
   selector: 'app-user-dashboard',
   standalone: true,
-  imports: [RouterLink, RouterOutlet, FormsModule, NgFor, NavbarComponent,NavlogComponent, SearchComponent],
+  imports: [RouterLink, RouterOutlet, FormsModule, NgFor, NavbarComponent, NavlogComponent, SearchComponent, UsernavComponent],
   templateUrl: './user-dashboard.component.html',
   styleUrl: './user-dashboard.component.css'
 })

@@ -22,6 +22,9 @@ export class AppComponent {
       if (event && event['url']) {
         this.isNavlogRoute = event.url.includes('/book-search') || event.url.includes('/user-search') || event.url.includes('/add-book');
       }
+      if (event && event['url']) {
+        this.isNavlogRoute = event.url.includes('/book-search') || event.url.includes('/borrow') || event.url.includes('/user-details');
+      }
 
     });
   }
