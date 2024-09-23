@@ -33,7 +33,6 @@ deleteBook(bookId: number): void {
           (response: { message: string }) => {
             alert(response.message); // Show confirmation message
             this.onSearch(); // Refresh book list
-            this.router.navigateByUrl('/books');
           },
           (error: HttpErrorResponse) => {
             alert('Error deleting book: ' + error.message);
