@@ -18,20 +18,21 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: #ffffff;
-        padding: 20px;
+        background-color: #c1dad9;
+        padding: 1px;
     }
     
     /* About Header */
     .about-header {
         width: 100%;
         text-align: center;
-        background-color: #0A1828; 
         color: #ffffff; 
+        margin-top: 10px;
+        
     }
     .about-header h1 {
-        font-size: 2.5rem;
-        color: #BFA181; 
+        font-size: 2rem;
+        color: #0A1828; 
     }
     
     /* About Content Section */
@@ -60,7 +61,7 @@
     
     .about-text p {
         font-size: 1.2rem;
-        color: #178582; 
+        color: #0c3332; 
         margin-bottom: 20px;
         line-height: 1.6;
     }
@@ -74,9 +75,10 @@
     
     .about-image img {
         width: 100%;
-        max-width: 400px;
-        border-radius: 10px;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    max-width: 490px;
+    border-radius: 10px;
+    box-shadow: 0 11px 25px rgba(0, 28, 0, 1.2);
+
     }
     
     /* Responsive Design */

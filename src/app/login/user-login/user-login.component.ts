@@ -5,6 +5,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 import { Router } from '@angular/router';
 import { UserService } from '../../services/user.service';
 import { NavbarComponent } from "../../navbar/navbar.component";
+import { AuthService } from '../../services/auth.service';
 @Component({
   selector: 'app-user-login',
   standalone: true,
@@ -18,6 +19,7 @@ export class UserLoginComponent {
     password:""
   }
   userService =inject(UserService)
+  authService = inject(AuthService)
   router = inject(Router);
   doLogin()
   {

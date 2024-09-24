@@ -1,21 +1,29 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable, tap } from 'rxjs';
+
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-
+  private apiUrls = 'https://localhost:7174/api/Users';
+  private apiUrl='https://localhost:7174/api/UserLogin'
   constructor(private http:HttpClient) { }
-  //write a function to call api and pass username and password
 
-  onLoginSubmit(userobj:any)
-  {
-    console.log(userobj);
-    
-    return this.http.post('https://localhost:7174/api/UserLogin/Login',userobj)
 
+  // Fetching user details by userId
+  getUserDetails(userId: number): Observable<any> {
+    return this.http.get<any>(`${this.apiUrls}/${userId}`);
   }
- 
 
+  // Update user details
+  updateUser(user: any): Observable<any> {
+    return this.http.put<any>(`${this.apiUrls}/${user.UId}`, user);
+  }
 
+  //User login 
+  onLoginSubmit(userobject: any): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/login`, userobject);
+  }
 }
+

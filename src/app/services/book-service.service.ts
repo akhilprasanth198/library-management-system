@@ -50,4 +50,7 @@ export class BookService {
   delbook(bookId : number): Observable<any> {
     return this.http.delete(`https://localhost:7174/api/Books/${bookId}`);
   }
+  returnBook(bookId: number, userId: number): Observable<any> {
+    return this.http.post<any>(`${this.apiUrls}/return`, { bookId, userId });
+  }
 }
