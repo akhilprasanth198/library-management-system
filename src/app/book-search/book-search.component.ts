@@ -3,7 +3,6 @@ import { BookService } from '../services/book-service.service';
 import { Book } from '../model/book'; // Import your book model
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { AuthService } from '../services/auth.service';
 @Component({
   selector: 'app-book-search',
   standalone :true,
@@ -16,7 +15,7 @@ export class BookSearchComponent implements OnInit {
   bookname: string = '';
 
 
-  constructor(private bookService: BookService,private authService: AuthService) { }
+  constructor(private bookService: BookService) { }
 
   ngOnInit(): void { }
 
@@ -29,7 +28,7 @@ export class BookSearchComponent implements OnInit {
     }
   }
   borrowBook(bookId: number) {
-    const userId = this.authService.getUserId(); // Get userId dynamically
+    const userId = 1; // Get userId dynamically
     if (userId === null) {
       alert("You need to log in to borrow a book.");
       return;
@@ -43,7 +42,7 @@ export class BookSearchComponent implements OnInit {
   }
 
   returnBook(bookId: number) {
-    const userId = this.authService.getUserId(); // Get userId dynamically
+    const userId = 1 ;
     if (userId === null) {
       alert("You need to log in to return a book.");
       return;
