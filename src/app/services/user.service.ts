@@ -7,7 +7,7 @@ import { Observable, tap } from 'rxjs';
 })
 export class UserService {
   private apiUrls = 'https://localhost:7174/api/Users';
-  private apiUrl='https://localhost:7174/api/UserLogin'
+  private apiUrl='https://localhost:7174/api/UserLogin';
   constructor(private http:HttpClient) { }
   //User login 
   onLoginSubmit(userobject: any): Observable<any> {
