@@ -25,7 +25,7 @@
                     <td>
                         <button *ngIf="book.quantity > 0" (click)="borrowBook(book.id)">Borrow</button>
                         <span *ngIf="book.quantity <= 0">Not Available</span><br><br>
-                        <button (click)="returnBook(book.id)">Return</button>0
+                        <button (click)="returnBook(book.id)">Return</button>
                     </td>
                 </tr>
             </tbody>

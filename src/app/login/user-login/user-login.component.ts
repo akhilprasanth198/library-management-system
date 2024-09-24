@@ -5,6 +5,8 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 import { Router } from '@angular/router';
 import { UserService } from '../../services/user.service';
 import { NavbarComponent } from "../../navbar/navbar.component";
+import { AuthService } from '../../services/auth.service';
+AuthService
 @Component({
   selector: 'app-user-login',
   standalone: true,
@@ -17,14 +19,18 @@ export class UserLoginComponent {
     username:"",
     password:""
   }
-  userService =inject(UserService)
+  userService =inject(UserService);
+  authService = inject(AuthService);
   router = inject(Router);
   doLogin()
   {
     this.userService.onLoginSubmit(this.userobject).subscribe((result:any) =>
     {
       console.log(result);
-      if(result && result.message=='Login successful'){
+      // If login is successful
+      if (result && result.message === 'Login successful') {
+        // Set the userId in AuthService
+        this.authService.setUserId(result.userId);  // Assuming result contains userId
         this.router.navigateByUrl('user-dashboard');
       }
       
