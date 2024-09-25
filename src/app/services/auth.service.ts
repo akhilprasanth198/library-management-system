@@ -13,7 +13,7 @@ export class AuthService {
     this.userId = id;
   }
 
-  // Get the user ID (either from memory or localStorage)
+  // Get the user ID 
   getUserId(): number | null {
     return this.userId;
   }

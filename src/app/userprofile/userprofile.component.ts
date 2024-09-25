@@ -35,13 +35,31 @@ export class UserprofileComponent implements OnInit {
     }
   }
 
-  // Update user details
+  // // Update user details
+  // updateUserDetails() {
+  //   this.userService.updateUserDetails(this.user.uid, this.user).subscribe(response => {
+  //     alert(response.message);
+  //   }, error => {
+  //     console.error("Error updating user details:", error);
+  //     alert("Failed to update user details");
+  //   });
+  // }
   updateUserDetails() {
-    this.userService.updateUserDetails(this.user.uid, this.user).subscribe(response => {
-      alert(response.message);
-    }, error => {
-      console.error("Error updating user details:", error);
-      alert("Failed to update user details");
-    });
-  }
+    const userId = this.authService.getUserId(); // Get the currently logged-in user's ID
+    if (userId) {
+        // Assuming 'this.user' contains the updated user details
+        this.userService.updateUserDetails(userId, this.user).subscribe(
+            response => {
+                alert(response.message); // Alert success message
+            },
+            error => {
+                console.error("Error updating user details:", error);
+                alert("Failed to update user details");
+            }
+        );
+    } else {
+        console.error("No user ID found. User might not be logged in.");
+    } 
+}
+
 }
