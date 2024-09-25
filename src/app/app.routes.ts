@@ -13,9 +13,10 @@
     import { AddbookComponent } from './addbook/addbook.component';
     import { UserSearchComponent } from './user-search/user-search.component';
     import { NavlogComponent } from './navlog/navlog.component';
-import { UsernavComponent } from './usernav/usernav.component';
-import { BookSearchComponent } from './book-search/book-search.component';
-import { DelBookComponent } from './delbook/delbook.component';
+    import { UsernavComponent } from './usernav/usernav.component';
+    import { BookSearchComponent } from './book-search/book-search.component';
+    import { DelBookComponent } from './delbook/delbook.component';
+    import { UserprofileComponent } from './userprofile/userprofile.component';
 
     export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },  // Keep only one default redirect
@@ -41,7 +42,7 @@ import { DelBookComponent } from './delbook/delbook.component';
         children: [
             { path: 'book-search', component: SearchComponent },
             { path: 'borrow', component:BookSearchComponent },
-
+            {path: 'userprofile',component:UserprofileComponent},
         ]
     },
 
