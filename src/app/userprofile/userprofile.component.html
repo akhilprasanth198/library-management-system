@@ -4,10 +4,10 @@
     <div class="user-profile">
         <form (ngSubmit)="updateUserDetails()">
         <label for="name">Name:</label>
-        <input [(ngModel)]="user.name" id="name" name="name" required />
+        <input [(ngModel)]="user.name" id="name" name="name" required readonly type="name"/>
     
         <label for="email">Email:</label>
-        <input [(ngModel)]="user.email" id="email" name="email" required type="email" />
+        <input [(ngModel)]="user.email" id="email" name="email" required readonly type="email" />
     
         <label for="password">Password:</label>
         <input [(ngModel)]="user.password" id="password" name="password" required type="password" />
