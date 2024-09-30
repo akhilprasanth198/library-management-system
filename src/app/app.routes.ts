@@ -23,7 +23,7 @@
     { path: 'home', component: HomeComponent },
     { path: 'login', component: LoginComponent, 
         children: [
-    { path: 'user-login', component: UserLoginComponent },
+        { path: 'user-login', component: UserLoginComponent },
         { path: 'user-registration', component: UserRegistrationComponent },
         { path: 'admin-login', component: AdminLoginComponent },
         { path: 'admin-registration', component: AdminRegistrationComponent }

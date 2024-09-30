@@ -11,6 +11,7 @@ import { NgIf } from '@angular/common';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  title='library';
   isDashboardRoute = false;
   isNavlogRoute = false;
   constructor(private router: Router) {

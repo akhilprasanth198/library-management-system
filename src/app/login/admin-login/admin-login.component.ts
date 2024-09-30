@@ -26,7 +26,7 @@ export class AdminLoginComponent {
 
       console.log(result);
       if(result && result.message=="login Succesful"){
-        this.router.navigateByUrl('admin-dashboard');
+        this.router.navigateByUrl('/adminNav/book-search');
       }
       
     },

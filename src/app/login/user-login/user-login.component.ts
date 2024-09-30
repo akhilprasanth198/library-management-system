@@ -31,7 +31,7 @@ export class UserLoginComponent {
       if (result && result.message === 'Login successful') {
         // Set the userId in AuthService
         this.authService.setUserId(result.userId);  // Assuming result contains userId
-        this.router.navigateByUrl('user-dashboard');
+        this.router.navigateByUrl('/userNav/book-search');
       }
       
     },
